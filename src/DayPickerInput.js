@@ -587,7 +587,7 @@ export default class DayPickerInput extends React.Component {
           ref={el => (this.input = el)}
           placeholder={this.props.placeholder}
           {...inputProps}
-          value={this.state.value || this.state.typedValue}
+          value={this.state.value || ''} //removed typedValue value, issues with multiple controlled day pickers when one of the picker's has undefined value
           onChange={this.handleInputChange}
           onFocus={this.handleInputFocus}
           onBlur={this.handleInputBlur}
