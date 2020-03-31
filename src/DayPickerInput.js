@@ -595,6 +595,7 @@ export default class DayPickerInput extends React.Component {
           onKeyUp={this.handleInputKeyUp}
           onClick={!inputProps.disabled ? this.handleInputClick : undefined}
         />
+        <span>{this.props.label}</span>
         {this.state.showOverlay && this.renderOverlay()}
       </div>
     );
